@@ -79,5 +79,10 @@ Feane-Online-Food-Ordering-Site/
 - Order tracking system.
 - Admin dashboard for managing orders and menu items.
 
+# Restaurant Menu Items Data Import Guide
+
+This guide explains how to import the `restaurant.menuitems.json` file into the `menuitems` collection in your MongoDB database.
+
+---
 
 
