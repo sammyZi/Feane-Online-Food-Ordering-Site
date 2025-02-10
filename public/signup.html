@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="images/favicon.png" type="">
+
+    <title>Sign Up - Feane</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <!-- Owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- Nice select -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+    <!-- Font Awesome style -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+
+    <style>
+/* Ensure all elements are sized according to the box model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Signup Container */
+.signup-container {
+    max-width: 600px; /* Set a maximum width */
+    width: 90%;      /* Allow it to take 90% of the screen width */
+    padding: 20px;    /* Add some padding */
+    margin: 0 auto;   /* Center the container */
+    background-color: #ffffff; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: all 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Form Layout */
+.signup-form {
+    display: flex;          /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+/* Input Styles */
+.form-control {
+    width: 100%;         /* Full width */
+    padding: 12px;      /* Adjust padding for better look */
+    border: 1px solid #ccc; /* Input border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px;    /* Font size for readability */
+    transition: border-color 0.3s; /* Transition for border color */
+}
+
+/* Input Focus Effect */
+.form-control:focus {
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Shadow on focus */
+}
+
+/* Submit Button */
+button[type="submit"] {
+    width: 100%;         /* Full width */
+    padding: 12px;      /* Button padding */
+    background-color: #007bff; /* Button color */
+    color: white;       /* Text color */
+    border: none;       /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;    /* Pointer cursor */
+    font-size: 16px;    /* Font size */
+    transition: background-color 0.3s; /* Transition for button color */
+}
+
+/* Button Hover Effect */
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker button on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .signup-container {
+        padding: 15px; /* Reduced padding on smaller screens */
+        width: 95%; /* Take up more width on smaller screens */
+    }
+
+    .form-control {
+        padding: 10px; /* Adjust input padding */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    button[type="submit"] {
+        padding: 10px; /* Adjust button padding */
+        font-size: 14px; /* Smaller font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-container {
+        padding: 10px; /* Further reduced padding */
+        margin: 10px; /* Ensure margin for smaller screens */
+        border-radius: 5px; /* Adjust border radius */
+        width: 98%; /* Take up almost full width on smaller screens */
+    }
+
+    .form-control {
+        padding: 8px; /* Adjust input padding */
+        font-size: 14px; /* Ensure readable font size */
+    }
+
+    button[type="submit"] {
+        padding: 10px; /* Adjust button padding */
+        font-size: 14px; /* Ensure readable font size */
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="hero_area">
+        <div class="bg-box">
+            <img src="images/hero-bg.jpg" alt="">
+        </div>
+        <!-- Header section starts -->
+        <header class="header_section">
+          <div class="container">
+              <nav class="navbar navbar-expand-lg custom_nav-container">
+                  <a class="navbar-brand" href="index.html">
+                      <span>Feane</span>
+                  </a>
+
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class=""> </span>
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mx-auto">
+                          <li class="nav-item active">
+                              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="menu.html">Menu</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="book.html">Book Table</a>
+                          </li>
+                      </ul>
+                      <div class="user_option">
+                          <a href="" class="user_link">
+                              <i class="fa fa-user" aria-hidden="true"></i>
+                          </a>
+                          <a class="cart_link" href="cart.html">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                              <g>
+                                <g>
+                                  <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                               c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                                </g>
+                              </g>
+                              <g>
+                                <g>
+                                  <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                               C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                               c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                               C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                                </g>
+                              </g>
+                              <g>
+                                <g>
+                                  <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                               c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                                </g>
+                              </g>
+                            </svg>
+                          </a>
+                          <form class="form-inline">
+              
+                          </form>
+                          <a href="" class="order_online">
+                              Order Online
+                          </a>
+                      </div>
+                  </div>
+              </nav>
+          </div>
+      </header>
+        <!-- End Header section -->
+
+        <div class="signup-container">
+          <form class="signup-form" id="signupForm">
+              <h2>Sign Up</h2>
+      
+              <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+              </div>
+      
+              <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+              </div>
+      
+              <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+              </div>
+      
+              <div class="form-group">
+                  <label for="address">Address</label>
+                  <input type="text" class="form-control" id="address" placeholder="Enter your address" required>
+              </div>
+      
+              <div class="form-group">
+                  <label for="age">Age</label>
+                  <input type="number" class="form-control" id="age" placeholder="Enter your age" required>
+              </div>
+      
+              <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+              </div>
+      
+              <div class="form-group">
+                  <label for="confirm-password">Confirm Password</label>
+                  <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password" required>
+              </div>
+      
+              <button type="submit">Sign Up</button>
+      
+              <p class="text-center mt-3">Already have an account? <a href="login.html" class="login-btn">Log In</a></p>
+          </form>
+      </div>
+
+    <!-- Footer section starts -->
+    <footer class="footer_section">
+        <div class="container">
+            <div class="footer_content">
+                <p>© 2024 Feane. All Rights Reserved | Designed by [Your Name]</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer section ends -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+<script>
+    document.getElementById('signupForm').addEventListener('submit', async function(e) {
+        e.preventDefault(); // Prevent the default form submission
+  
+        const formData = {
+            name: document.getElementById('name').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            phone: document.getElementById('phone').value.trim(),
+            address: document.getElementById('address').value.trim(),
+            age: document.getElementById('age').value.trim(),
+            password: document.getElementById('password').value.trim()
+        };
+  
+        // Simple validation
+        for (const key in formData) {
+            if (!formData[key]) {
+                alert(`${key.charAt(0).toUpperCase() + key.slice(1)} is required.`);
+                return; // Stop the submission if validation fails
+            }
+        }
+  
+        try {
+            const response = await fetch('/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+  
+            // Check if the response is OK (status in the range 200-299)
+            if (response.ok) {
+                const result = await response.text(); // You can change this to response.json() if your server returns JSON
+                alert(result); // Show success message
+                // Clear the form
+                document.getElementById('signupForm').reset();
+            } else {
+                const errorResult = await response.text();
+                alert(`Signup failed: ${errorResult}`); // Show error message
+            }
+        } catch (error) {
+            alert('Error occurred during signup.');
+        }
+    });
+  </script>
+  
+
+</html>

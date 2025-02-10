@@ -1,0 +1,70 @@
+body {
+    background-color: white; /* Changed background to white */
+    color: #222831; /* Dark text color */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #f8f9fa; /* Light background for the container */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h2 {
+    text-align: center;
+    color: #222831; /* Dark text color for the heading */
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #222831; /* Dark label color */
+}
+
+input {
+    width: 100%;
+    padding: 10px; /* Padding inside the input */
+    border: 1px solid #222831; /* Border color */
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffbe33; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #009d9a; /* Darker shade on hover */
+}
+
+.message {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer a {
+    color: #00adb5; /* Link color */
+}

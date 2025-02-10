@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+    <title>Feane</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <!-- Owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <!-- Nice select -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+
+    <!-- Font Awesome style -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+<style>
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Container */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+.header_section {
+  background-color: #222831; /* Dark background */
+  padding: 10px 0;
+}
+
+.header_section .navbar-brand span {
+  color: #ffffff; /* Cyan color for brand */
+  font-size: 24px;
+}
+
+/* Navigation Links */
+.navbar-nav .nav-link {
+  color: #ffffff; /* White text */
+  padding: 10px 15px;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #00adb5; /* Cyan background on hover */
+  border-radius: 5px;
+}
+
+/* Cart Container */
+.cart-container {
+  background-color: #ffffff; /* White background for the cart section */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* Cart Title */
+.cart-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222831; /* Dark text color */
+}
+
+/* Cart Items */
+#cartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between items */
+}
+
+/* Individual Cart Item */
+.cart-item {
+  background-color: #f1f1f1; /* Light gray for item background */
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s; /* Transition effect */
+}
+
+/* Hover Effect for Cart Item */
+.cart-item:hover {
+  background-color: #e2e2e2; /* Darker gray on hover */
+}
+
+/* Food Name */
+.cart-item .name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00adb5;
+  margin-right: 20px;
+}
+
+/* Item Price */
+.price-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px; /* Set a fixed width for better alignment */
+  padding: 10px;
+  background-color: #f1f1f1; /* Light gray background */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Price Style */
+.price-box .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Quantity Controls */
+.quantity-box {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-control input {
+  width: 50px; /* Smaller input box */
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+/* Plus/Minus Button */
+.quantity-control button {
+  padding: 5px;
+  font-size: 14px;
+  width: 30px; /* Small button size */
+  height: 30px; /* Square shape */
+  background-color: #00adb5;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.quantity-control button:hover {
+  background-color: #0097a7; /* Darker cyan on hover */
+}
+
+/* Remove Button */
+.remove-btn {
+  padding: 5px 10px;
+  background-color: #ff3b30; /* Red background for remove */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+  background-color: #ff1a1a; /* Darker red on hover */
+}
+
+/* Logout Button */
+.logout-btn {
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  background: none;
+  color: red;
+  font-size: 16px;
+}
+input[type="number"] {
+    width: 20%; /* Set the width to 20% */
+    padding: 5px; /* Adjust padding if needed */
+    text-align: center; /* Center the text for a better look */
+    font-size: 16px; /* Adjust font size for readability */
+}
+/* Button Styles */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00adb5; /* Cyan button color */
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transition effect */
+}
+
+button:hover {
+  background-color: #0097a7; /* Darker cyan on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column; /* Stack nav items vertically on smaller screens */
+  }
+  .cart-container {
+    padding: 10px;
+  }
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+    padding: 10px; /* Reduced padding for smaller screens */
+  }
+  .cart-item .name,
+  .cart-item .price,
+  .cart-item .quantity {
+    font-size: 14px;
+  }
+  .remove-btn {
+    margin-top: 10px; /* Add space above remove button */
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-container {
+    padding: 5px;
+  }
+  .cart-item {
+    padding: 8px; /* Further reduced padding */
+  }
+  .cart-item .name,
+  .cart-item .price,
+  .cart-item .quantity {
+    font-size: 12px;
+  }
+  .logout-btn {
+    font-size: 12px;
+  }
+}
+
+/* Additional Styles */
+.cart-container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Centering Buttons */
+.cart-item button {
+  margin: 0 auto;
+}
+
+/* Spacing Between Buttons */
+.cart-item button + button {
+  margin-left: 10px;
+}
+
+
+  </style>
+
+    <div class="hero_area">
+        <div class="bg-box">
+            <img src="images/hero-bg.jpg" alt="Hero Background">
+        </div>
+        <!-- header section starts -->
+        <header class="header_section">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg custom_nav-container">
+                    <a class="navbar-brand" href="index.html">
+                        <span>Feane</span>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="menu.html">Menu</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="cart.html">Your Cart <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html" id="loginBtn">Login</a>
+                            </li>
+                        </ul>
+                        <span class="logout-btn" id="logoutBtn" style="display:none; color: red; cursor: pointer;">Logout</span>
+                        <div class="user_option">
+                            <a href="profile.html" class="user_link" aria-label="User Profile">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </a>
+                            <a class="cart_link" href="cart.html" aria-label="Cart">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                                    <g>
+                                        <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                     c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                                        <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                     C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                     c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                     C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                                        <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                     c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                                    </g>
+                                </svg>
+                            </a>
+                            <form class="form-inline">
+                                <button class="btn my-2 my-sm-0 nav_search-btn" type="submit" aria-label="Search">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                            </form>
+                            <a href="menu.html" class="order_online">Order Online</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- end header section -->
+    </div>
+
+    <!-- cart section -->
+    <div class="cart-container">
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+    </div>
+
+    <script>
+// Function to get cart items for the logged-in user
+function getCartItems() {
+    const userId = localStorage.getItem('userId'); // Assuming user ID is stored in local storage
+
+    fetch(`/api/cart/${userId}`) // Adjust the API endpoint as needed
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Cart items:', data);
+            const cartItemsContainer = document.getElementById('cartItems');
+
+            // Clear the cart items container
+            cartItemsContainer.innerHTML = '';
+
+            // Check if cart is empty
+            if (data.length === 0) {
+                cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+                return;
+            }
+
+            // Initialize total price
+            let totalPrice = 0;
+
+            // Loop through cart items and display them
+            data.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'cart-item';
+                itemDiv.innerHTML = `
+                    <h4>${item.foodName}</h4> <!-- Display food name -->
+                    <p>Price: ₹${item.price}</p>
+                    <p>Quantity: ${item.quantity}</p>
+                    <button class="delete-btn" data-id="${item._id}">Delete</button>
+                    <button class="update-qty-btn" data-id="${item._id}">Update Quantity</button>
+                    <input type="number" class="qty-input" value="${item.quantity}" data-id="${item._id}">
+                `;
+                cartItemsContainer.appendChild(itemDiv);
+
+                // Update total price
+                totalPrice += item.price * item.quantity;
+            });
+
+            // Display total price
+            const totalPriceDiv = document.createElement('div');
+            totalPriceDiv.innerHTML = `Total Price: ₹${totalPrice}`;
+            cartItemsContainer.appendChild(totalPriceDiv);
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+}
+
+// Add event listeners for delete and update quantity buttons
+document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('delete-btn')) {
+            const itemId = event.target.getAttribute('data-id');
+            deleteItemFromCart(itemId);
+        } else if (event.target.classList.contains('update-qty-btn')) {
+            const itemId = event.target.getAttribute('data-id');
+            const newQuantity = document.querySelector(`.qty-input[data-id="${itemId}"]`).value;
+            updateQuantityInCart(itemId, newQuantity);
+        }
+    });
+});
+
+// Function to delete item from cart
+function deleteItemFromCart(itemId) {
+    const userId = localStorage.getItem('userId');
+    fetch(`/api/cart/${userId}/${itemId}`, {
+        method: 'DELETE'
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Item deleted from cart:', data);
+        const cartItemsContainer = document.getElementById('cartItems');
+        cartItemsContainer.innerHTML = ''; // Clear cart items container
+        getCartItems(); // Refresh cart items
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
+}
+
+// Function to update quantity in cart
+function updateQuantityInCart(itemId, newQuantity) {
+    const maxLimit = 15;
+
+    if (newQuantity > maxLimit) {
+        alert(`The maximum quantity limit is ${maxLimit}`);
+        return; // Stop the function from proceeding
+    }
+
+    const userId = localStorage.getItem('userId');
+    fetch(`/api/cart/${userId}/${itemId}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ quantity: newQuantity })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Quantity updated in cart:', data);
+        getCartItems(); // Refresh cart items
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
+}
+
+
+// Optional: Display login/logout button based on logged-in state
+window.onload = function () {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    const loginBtn = document.getElementById('loginBtn');
+    const logoutBtn = document.getElementById('logoutBtn');
+
+    if (isLoggedIn === 'true') {
+        loginBtn.style.display = 'none'; // Hide login button
+        logoutBtn.style.display = 'inline'; // Show logout button
+        getCartItems(); // Fetch cart items if logged in
+    } else {
+        loginBtn.style.display = 'inline'; // Show login button
+        logoutBtn.style.display = 'none'; // Hide logout button
+    }
+};
+
+// Handle logout
+document.getElementById('logoutBtn').onclick = function () {
+    localStorage.removeItem('userId');
+    localStorage.removeItem('isLoggedIn');
+    window.location.href = 'index.html'; // Redirect to home page
+};
+    </script>
+    
+     <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- isotope js -->
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+    
+</body>
+
+</html>
