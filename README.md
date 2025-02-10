@@ -43,7 +43,7 @@ FoodExpress is an interactive and user-friendly web application designed to prov
    node server.js
    ```
 
-5. **Access the application:** Open [http://localhost:3000](https://localhost:3000) in your web browser.
+5. **Access the application:** Open [https://localhost:3000](https://localhost:3000) in your web browser.
 
 ## Prerequisites
 Make sure to have the following software installed:
