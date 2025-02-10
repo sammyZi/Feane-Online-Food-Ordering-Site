@@ -1,0 +1,63 @@
+[{
+  "_id": {
+    "$oid": "6700b65da614460bbdf31e86"
+  },
+  "foodName": "Delicious Pizza - Margherita Pizza",
+  "price": 399
+},
+{
+  "_id": {
+    "$oid": "6700b65da614460bbdf31e87"
+  },
+  "foodName": "Delicious Burger - Classic Burger",
+  "price": 150
+},
+{
+  "_id": {
+    "$oid": "6700b65da614460bbdf31e88"
+  },
+  "foodName": "Delicious Pizza - Pepperoni Pizza",
+  "price": 450
+},
+{
+  "_id": {
+    "$oid": "6700b65da614460bbdf31e89"
+  },
+  "foodName": "Delicious Pasta - Fettuccine",
+  "price": 350
+},
+{
+  "_id": {
+    "$oid": "6700b65da614460bbdf31e8a"
+  },
+  "foodName": "French Fries - Classic French Fries",
+  "price": 120
+},
+{
+  "_id": {
+    "$oid": "6700b65da614460bbdf31e8b"
+  },
+  "foodName": "Delicious Pizza - BBQ Chicken Pizza",
+  "price": 399
+},
+{
+  "_id": {
+    "$oid": "6700b65da614460bbdf31e8c"
+  },
+  "foodName": "Tasty Burger - Mushroom Swiss Burger",
+  "price": 199
+},
+{
+  "_id": {
+    "$oid": "6700b65da614460bbdf31e8d"
+  },
+  "foodName": "Tasty Burger - Veggie Burger",
+  "price": 150
+},
+{
+  "_id": {
+    "$oid": "6700b65da614460bbdf31e8e"
+  },
+  "foodName": "Delicious Pasta - Penne",
+  "price": 199
+}]
